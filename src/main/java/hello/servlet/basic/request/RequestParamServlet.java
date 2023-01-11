@@ -44,7 +44,9 @@ public class RequestParamServlet extends HttpServlet {
             System.out.println("username = " + name);
             
         }
-        
+
+        // 새로고침 시 html처럼 ok 라고 응답이 찍혀져서 확인가능
+        response.getWriter().write("ok");
 
 
     }
