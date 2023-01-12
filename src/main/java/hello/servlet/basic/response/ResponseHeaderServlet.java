@@ -20,7 +20,7 @@ public class ResponseHeaderServlet extends HttpServlet {
         response.setStatus(HttpServletResponse.SC_OK);
 
         // [response-headers]
-//        response.setHeader("Content-Type", "text/plain;charset=utf-8");
+        response.setHeader("Content-Type", "text/plain;charset=utf-8");
         response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
         response.setHeader("Pragma", "no-cache");
         response.setHeader("my-header", "hello");
@@ -33,6 +33,8 @@ public class ResponseHeaderServlet extends HttpServlet {
         redirect(response);
 
 
+
+        // [message body]
         PrintWriter writer = response.getWriter();
         writer.println("ok"); // ln을 사용해서 끝에 엔터가 들어가서 길이가 3으로 나온다 원래는 2로 나와야 정상.
 
@@ -64,10 +66,10 @@ public class ResponseHeaderServlet extends HttpServlet {
         //Status Code 302
         //Location: /basic/hello-form.html
 
-        response.setStatus(HttpServletResponse.SC_FOUND); //302
-        response.setHeader("Location", "/basic/hello-form.html");
+//        response.setStatus(HttpServletResponse.SC_FOUND); //302
+//        response.setHeader("Location", "/basic/hello-form.html");
 
-//        response.sendRedirect("/basic/hello-form.html");
+        response.sendRedirect("/basic/hello-form.html");
     }
 
 }
