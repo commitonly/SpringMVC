@@ -28,6 +28,7 @@ public class ResponseJsonServlet extends HttpServlet {
 
 
         //{username":"kim", "age",:20}
+        // 2023.1.13 -> 진행율 30미만
 
         String result = objectMapper.writeValueAsString(helloData);
 
