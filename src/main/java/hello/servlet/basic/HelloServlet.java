@@ -9,11 +9,15 @@ import java.io.IOException;
 
 @WebServlet(name = "helloServlet", urlPatterns = "/hello")
 public class HelloServlet extends HttpServlet {
+
+    String id = "950413-1234567";
     @Override
+
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("HelloServlet.service");
         System.out.println("request = " + request);
         System.out.println("response = " + response);
+
 
         String username = request.getParameter("username");
         System.out.println("username = " + username);
